@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #FAEBD7;
+            color: #333;
+        }
+        header {
+            background-image: url('pic1.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        header a {
+            background-color: #ff6f61;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1rem;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .container {
+            width: 100%;
+            max-width: 2000px;
+            margin: 0 auto;
+        }
+        section {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        #about, #menu, #contact {
+            margin-bottom: 30px;
+        }
+        .menu {
+            background-image: url("Pic3.avif");
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            color: rgb(0, 0, 0);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;   
+        }
+  
+        .menu h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #f4f4f4;
+        }
+  
+        .menu-items {
+            display: flex;
+            justify-content: space-around;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+  
+        .menu-item {
+            background: #f4f4f4;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+  
+        .menu-item h3 {
+            margin-bottom: 0.5rem;
+        }
+  
+        .menu-item p {
+            font-size: 0.9rem;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2>Main Course</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <h3>Paneer Butter Masala</h3>
+                    <p>A creamy tomato-based curry with soft cubes of Paneer. <strong>$10</strong></p>
+                </div>
+                <div class="menu-item">
+                    <h3>Vegetable Biryani</h3>
+                    <p>Aromatic basmati rice cooked with fresh vagetables and spices. <strong>$11</strong></p>
+                </div>
+                <div class="menu-item">
+                    <h3>Palak Paneer</h3>
+                    <p>Paneer cubes in a rich spinach gravy with subtle spices. <strong>$12</strong></p>
+                </div>
+                <div class="menu-item">
+                    <h3>Mixed vagetable Curry</h3>
+                    <p>A flavorful meldey of seasonal vegetables in a tangy sauce. <strong>$9</strong></p>
+                </div>
+                <div class="menu-item">
+                    <h3>Chana Masala</h3>
+                    <p>Chickpeas cooked in a spicy, tangy tomato-based gravy. <strong>$8</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

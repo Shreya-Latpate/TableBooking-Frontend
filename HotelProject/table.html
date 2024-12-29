@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Table Management</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .table {
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    .table h3 {
+      margin: 5px 0;
+    }
+    .available {
+      background-color: #d4edda;
+      color: #155724;
+    }
+    .booked {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hotel Table Management</h1>
+
+  <h2>Available Tables</h2>
+  <div id="availableTables"></div>
+
+  <h2>Booked Tables</h2>
+  <div id="bookedTables"></div>
+
+  <h2>All Table Details</h2>
+  <div id="allTables"></div>
+
+  <script>
+    // Sample table data
+    const tables = [
+      { id: 1, capacity: 4, location: "Near Window", status: "available" },
+      { id: 2, capacity: 6, location: "Center Hall", status: "booked" },
+      { id: 3, capacity: 2, location: "Corner", status: "available" },
+      { id: 4, capacity: 8, location: "Terrace", status: "booked" },
+      { id: 5, capacity: 4, location: "Garden View", status: "available" },
+    ];
+
+    // Function to render tables based on status
+    function renderTables() {
+      const availableTables = document.getElementById("availableTables");
+      const bookedTables = document.getElementById("bookedTables");
+      const allTables = document.getElementById("allTables");
+
+      availableTables.innerHTML = "";
+      bookedTables.innerHTML = "";
+      allTables.innerHTML = "";
+
+      tables.forEach((table) => {
+        const tableDiv = document.createElement("div");
+        tableDiv.className = `table ${table.status}`;
+        tableDiv.innerHTML = `
+          <h3>Table ID: ${table.id}</h3>
+          <p>Capacity: ${table.capacity}</p>
+          <p>Location: ${table.location}</p>
+          <p>Status: ${table.status}</p>
+        `;
+
+        // Add to specific sections based on status
+        if (table.status === "available") {
+          availableTables.appendChild(tableDiv);
+        } else if (table.status === "booked") {
+          bookedTables.appendChild(tableDiv);
+        }
+
+        // Add to all tables section
+        allTables.appendChild(tableDiv.cloneNode(true));
+      });
+    }
+
+    // Initial rendering
+    renderTables();
+  </script>
+</body>
+</html>
